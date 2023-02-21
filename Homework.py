@@ -1,23 +1,23 @@
 import sys
 
 a = 5
-int(input("Int:"))     #int обозначает целое число
+a = int(input("Int:"))     #int обозначает целое число
 
-bool(input("bool:"))    #bool принимает True, False, для возвращения операции
+b =bool(input("bool:"))    #bool принимает True, False, для возвращения операции
 
-input("String:")   #String обозначает строку
+c = input("String:")   #String обозначает строку
 
-complex(input("Complex:"))
-float(input("float:"))   #Float обозначает число с плавающей точкой
+d = complex(input("Complex:"))
+e = float(input("float:"))   #Float обозначает число с плавающей точкой
 
 print("Int:", int(a))       #int обозначает целое число
 
-print("bool:", bool(a))     #bool принимает True, False, для возвращения операции
+print("bool:", bool(b))     #bool принимает True, False, для возвращения операции
 
-print("String:", str(a))    #String обозначает строку
+print("String:", str(c))    #String обозначает строку
 
-print("Complex:", complex(a))
-print("float:", float(a))   #Float обозначает число с плавающей точкой
+print("Complex:", complex(d))
+print("float:", float(e))   #Float обозначает число с плавающей точкой
 
 print("Max_Int:", (sys.maxsize))
 print("Max_Float:", (sys.float_info.max))
