@@ -1,6 +1,14 @@
 import sys
 
 a = 5
+int(input("Int:"))     #int обозначает целое число
+
+bool(input("bool:"))    #bool принимает True, False, для возвращения операции
+
+input("String:")   #String обозначает строку
+
+complex(input("Complex:"))
+float(input("float:"))   #Float обозначает число с плавающей точкой
 
 print("Int:", int(a))       #int обозначает целое число
 
