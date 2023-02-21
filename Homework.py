@@ -1,6 +1,6 @@
 import sys
 
-a = 5
+
 a = int(input("Int:"))     #int обозначает целое число
 
 b =bool(input("bool:"))    #bool принимает True, False, для возвращения операции
