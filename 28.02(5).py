@@ -17,10 +17,8 @@ while x_min != x_max:
 
     print("Координаты x =", x_min, ",y =", y)
 
-    plt.plot([x,y])
-
-    ax.set(xlim=(-10, 10), ylim=(30, 60))
-    plt.show()
+plt.plot([x, y])
+plt.show()
 
 
 
