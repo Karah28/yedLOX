@@ -14,18 +14,20 @@ if choice == 1:
     print("Арифметическая прогрессия:", Summ_a)
     print("геометрическая прогрессия:", Summ_b)
 elif choice == 2:
-    summ = 0
-    for i in range(one, last + 1):
-        s = i + diff
-        summ = s + summ
+    summ = 1
+    s = one
+    for i in range(one, last):
+        s += diff
+        summ = summ + s
     print("Арифметическая прогрессия:", summ)
 
 
-    summ = one
-    for i in range(one, last + 1):
-        s = i * den
+    summ = 1
+    s = 1
+    for i in range(one, last):
+        s *= den
         summ = s + summ
-    print("геометрическая прогрессия:", summ)
+    print("Геометрическая прогрессия:", summ)
 
 
 
