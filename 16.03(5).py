@@ -5,30 +5,34 @@ import copy
 
 a_1 = int(input("Введите коэффиценты матрицы:"))
 a_2 = int(input("Введите коэффиценты матрицы:"))
-b_1 = int(input("Введите игреки:"))
-b_2 = int(input("Введите игреки:"))
+a_3 = int(input("Введите коэффиценты матрицы:"))
+a_4 = int(input("Введите коэффиценты матрицы:"))
+y_1 = int(input("Введите игреки:"))
+y_2 = int(input("Введите игреки:"))
 
 
 
-matrix = [[a_1, a_2], [b_1, b_2]]
+matrix = [[a_1, a_2], [a_3, a_4]]
 
 
-d = (a_1 * b_2) - (a_2 * b_1)
-d_1 = d + b_2
+A = (a_1 * a_4) - (a_2 * a_3)
+
+
 
 for i in range(1, len(matrix)):
-    matrix_1 = copy.deepcopy(matrix)
-    matrix[0][0] = d
-    matrix[1][0] = d_1
-    matrix_1[0][1] = d
-    matrix_1[1][1] = d_1
-    print(matrix, matrix_1)
+    a_1 = y_1
+    a_3 = y_2
+    A_1 = (a_1 * a_4) - (a_2 * a_3)
+    a_1 = matrix[0][0]
+    a_3 = matrix[1][0]
+    a_2 = y_1
+    a_4 = y_2
+    A_2 = (a_1 * a_4) - (a_2 * a_3)
+    a_2 = matrix[0][1]
+    a_4 = matrix[1][1]
 
-D_1 = d * b_2 - a_2 * d_1
-D_2 = d * b_1 - a_1 * b_2
-
-x_1 = D_1 / d
-x_2 = D_2 / d
+x_1 = A_1 / A
+x_2 = A_2 / A
 
 print(x_1, x_2)
 
