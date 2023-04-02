@@ -32,20 +32,22 @@ def find_root_brute(brd_l, brd_r, func):
     step = 0.01
     x = brd_l
     while x <= brd_r:
-        if func(x) * func(x+step) <= 0:
-            return (x, x+step)
+        if func(x) * func(x + step) <= 0:
+            return (x)
         x += step
     return None
+
 
 
 def find_root_dich(brd_l, brd_r, func):
     while brd_r - brd_l > 0.001:
         mid = (brd_l + brd_r) / 2
+
         if func(brd_l) * func(mid) < 0:
             brd_r = mid
         else:
             brd_l = mid
-    return (brd_l, brd_r)
+    return (brd_l, brd_r, mid)
 
 
 brd_l = -10
@@ -75,22 +77,19 @@ plt.plot(x, [cubic(i) for i in x], label='cubic', linewidth=2)
 
 plt.scatter(lin_extremum[0], lin_extremum[1], color='red', s=50, marker='o')
 plt.scatter(lin_extremum[2], lin_extremum[3], color='red', s=50, marker='o')
-plt.scatter(lin_root_brute[0], 0, color='green', s=50, marker='x')
-plt.scatter(lin_root_brute[1], 0, color='green', s=50, marker='x')
+
 plt.scatter(lin_root_dichotomy[0], 0, color='blue', s=50, marker='x')
 plt.scatter(lin_root_dichotomy[1], 0, color='blue', s=50, marker='x')
 
 plt.scatter(quad_extremum[0], quad_extremum[1], color='red', s=50, marker='o')
 plt.scatter(quad_extremum[2], quad_extremum[3], color='red', s=50, marker='o')
-plt.scatter(quad_root_brute[0], 0, color='green', s=50, marker='x')
-plt.scatter(quad_root_brute[1], 0, color='green', s=50, marker='x')
+
 plt.scatter(quad_root_dichotomy[0], 0, color='blue', s=50, marker='x')
 plt.scatter(quad_root_dichotomy[1], 0, color='blue', s=50, marker='x')
 
 plt.scatter(cubic_extremum[0], cubic_extremum[1], color='red', s=50, marker='o')
 plt.scatter(cubic_extremum[2], cubic_extremum[3], color='red', s=50, marker='o')
-plt.scatter(cubic_root_brute[0], 0, color='green', s=50, marker='x')
-plt.scatter(cubic_root_brute[1], 0, color='green', s=50, marker='x')
+
 plt.scatter(cubic_root_dichotomy[0], 0, color='blue', s=50, marker='x')
 plt.scatter(cubic_root_dichotomy[1], 0, color='blue', s=50, marker='x')
 
