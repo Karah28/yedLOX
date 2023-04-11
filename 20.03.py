@@ -47,7 +47,9 @@ def find_root_dich(brd_l, brd_r, func):
             brd_r = mid
         else:
             brd_l = mid
-    return (brd_l, brd_r, mid)
+
+
+    return (brd_l / 2, brd_r / 2)
 
 
 brd_l = -10
