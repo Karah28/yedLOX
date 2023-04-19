@@ -255,44 +255,6 @@ class Fraction:
 '''
 
 
-class Rectangle:
-    def __init__(self, point1, point2):
-        self._x1, self._y1 = point1
-        self._x2, self._y2 = point2
-
-    def perimeter(self):
-        width = abs(self._x2 - self._x1)
-        height = abs(self._y2 - self._y1)
-        return round(2 * (width + height), 2)
-
-    def area(self):
-        width = abs(self._x2 - self._x1)
-        height = abs(self._y2 - self._y1)
-        return round(width * height, 2)
-
-    def get_pos(self):
-        return (self._x1, self._y1)
-
-    def get_size(self):
-        width = abs(self._x2 - self._x1)
-        height = abs(self._y2 - self._y1)
-        return (width, height)
-
-    def move(self, dx, dy):
-        self._x1 += dx
-        self._y1 += dy
-        self._x2 += dx
-        self._y2 += dy
-
-    def resize(self, width, height):
-        self._x2 = self._x1 + width
-        self._y2 = self._y1 + height
-
-rect = Rectangle((7.52, -4.3), (3.2, 3.14))
-print(rect.get_pos(), rect.get_size())
-rect.resize(23.5, 11.3)
-print(rect.get_pos(), rect.get_size())
-
 
 
 
